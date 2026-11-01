@@ -21,8 +21,8 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-      - name: Color engine tests
-        run: node --test tests/color.test.mjs
+      - name: Color engine and creative tools tests
+        run: node --test
       - name: Build for GitHub Pages
         run: npm run build -- --base=/color-studio/
       - uses: actions/configure-pages@v5

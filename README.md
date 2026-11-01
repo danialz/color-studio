@@ -4,7 +4,7 @@
 
 Explore a carefully curated palette library, create color harmonies, inspect readability, and preview your colors on real interface examples — all in your browser.
 
-> Foundation preview · This is an active portfolio project, not a production-grade design token platform yet.
+> v0.2 Creative Tools · A browser-local, free and open-source portfolio project. Not yet a production-grade design token platform.
 
 ## What's inside
 
@@ -15,7 +15,14 @@ Explore a carefully curated palette library, create color harmonies, inspect rea
 | Local favorites and palette details | Copy CSS variables / JSON | Product landing page |
 | HEX copying and WCAG contrast checks | Download JSON and copy sharing URL | Live palette mapping |
 
-Responsive layout, dark/light themes, keyboard navigation, and reduced-motion preferences are part of the initial foundation.
+### New in v0.2 — Creative Tools
+
+- **Image to Palette:** upload or drop a local PNG/JPEG/WebP/AVIF/GIF (up to 12 MB), extract five dominant colors, copy HEX values, or apply them directly in the generator. The canvas samples a downscaled bitmap; original photos are never uploaded.
+- **Gradient Studio:** linear, radial, and conic gradients, adjustable angle and stops, three curated presets, use your current palette, copy validated CSS.
+- Lightweight portfolio footer: [Made by DaNial Zameni](https://danialz.com).
+- **Apache License 2.0** with full `LICENSE` and project `NOTICE`.
+
+Responsive layout, dark/light themes, keyboard navigation, and reduced-motion preferences remain part of the experience.
 
 ## Run locally
 
@@ -32,7 +39,7 @@ Visit the local URL printed by Vite (usually `http://localhost:5173`).
 
 ```bash
 npm run lint
-node --test tests/color.test.mjs
+node --test
 npm run build
 ```
 
@@ -44,16 +51,16 @@ GitHub Actions runs those same checks for pull requests and pushes to `main` or 
 - Handcrafted design system in CSS; no UI framework dependency
 - Native browser APIs for copy, download and local persistence
 - Dependency-free HSL / WCAG contrast utilities in `src/lib/color.ts`
-- Node.js native test runner for the color engine
+- Node.js native test runner for color engine, image extraction, and gradients
 
 ## Project structure
 
 ```text
 src/
-  components/   Palette card, SVG icons, interface previews
+  components/   Palette cards, icons, previews, and creative tools
   data/         Handpicked seed palettes
-  lib/          Pure color math, harmony, export and URL helpers
-  App.tsx       Explore, Create and Preview flows
+  lib/          Pure color math, image clustering, gradients and URL helpers
+  App.tsx       Explore, Create/Creative Tools and Preview flows
   App.css       Design system and responsive layouts
   index.css     Global CSS reset
 public/         Brand favicon
@@ -70,12 +77,12 @@ Preview examples contain intentionally fictional UI data. No user accounts, back
 
 ## Roadmap
 
-Next iterations are planned to cover image-to-palette, gradient editing, perceptually uniform token scales, richer export formats and enhanced accessibility inspection. Roadmap items are not shipped features.
+Next iterations may include OKLCH-based perceptual scales, richer export formats and enhanced accessibility inspection. These roadmap items are not yet shipped features.
 
 ## Author
 
-Made by [Danial Zameni](https://danialz.com).
+Made by [DaNial Zameni](https://danialz.com).
 
 Repository: [danialz/color-studio](https://github.com/danialz/color-studio)
 
-*License: not selected yet.*
+**License:** [Apache-2.0](LICENSE). See [NOTICE](NOTICE).
